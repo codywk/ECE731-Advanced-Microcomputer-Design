@@ -1,3 +1,7 @@
 |QuadratureEncoderTop
+clk => ~NO_FANOUT~
+reset => ~NO_FANOUT~
+A => ~NO_FANOUT~
+B => ~NO_FANOUT~
 
 
