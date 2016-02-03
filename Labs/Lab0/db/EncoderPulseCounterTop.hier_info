@@ -1,0 +1,70 @@
+|EncoderPulseCounterTop
+A => A.IN1
+B => B.IN1
+clk => clk.IN2
+reset => reset.IN1
+count[0] <= UpDownCounter:udCtr.count
+count[1] <= UpDownCounter:udCtr.count
+count[2] <= UpDownCounter:udCtr.count
+count[3] <= UpDownCounter:udCtr.count
+count[4] <= UpDownCounter:udCtr.count
+count[5] <= UpDownCounter:udCtr.count
+count[6] <= UpDownCounter:udCtr.count
+count[7] <= UpDownCounter:udCtr.count
+
+
+|EncoderPulseCounterTop|EncoderDecoder:encoder
+A => change.IN1
+A => direction.IN1
+A => _A.DATAIN
+B => change.IN1
+B => _B.DATAIN
+clk => _B.CLK
+clk => _A.CLK
+change <= change.DB_MAX_OUTPUT_PORT_TYPE
+direction <= direction.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|EncoderPulseCounterTop|UpDownCounter:udCtr
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+enable => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+dir => count.OUTPUTSELECT
+clk => count[0]~reg0.CLK
+clk => count[1]~reg0.CLK
+clk => count[2]~reg0.CLK
+clk => count[3]~reg0.CLK
+clk => count[4]~reg0.CLK
+clk => count[5]~reg0.CLK
+clk => count[6]~reg0.CLK
+clk => count[7]~reg0.CLK
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+reset => count.OUTPUTSELECT
+count[0] <= count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[4] <= count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[5] <= count[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[6] <= count[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count[7] <= count[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,6 @@
+UpDownCounter #(WIDTH=8)(
+input enable,
+input dir,
+input clk,
+input reset,
+output reg [WIDTH:0] count);

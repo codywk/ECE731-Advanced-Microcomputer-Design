@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Wed Jan 27 12:05:10 2016
+Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
+Revision Name : EncoderPulseCounterTop
+Top-level Entity Name : EncoderPulseCounterTop
+Family : Cyclone III
+Total logic elements : 13
+    Total combinational functions : 11
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 12
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

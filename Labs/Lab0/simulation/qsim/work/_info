@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\codyw\Documents\Kansas State Classes\ECE 731 - Advanced Microcomputer Design\Labs\Lab0\simulation\qsim
+vEncoderPulseCounterTop
+Z1 !s100 H:O1XRG_>^LY]Lf:bm_X_3
+Z2 Ic9_0YE^bHIB_cXE]kZLlh0
+Z3 V@X>iVJG?25jU5bPJ59`Dz1
+Z4 dC:\Users\codyw\Documents\Kansas State Classes\ECE 731 - Advanced Microcomputer Design\Labs\Lab0\simulation\qsim
+Z5 w1453918254
+Z6 8EncoderPulseCounterTop.vo
+Z7 FEncoderPulseCounterTop.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|EncoderPulseCounterTop.vo|
+Z10 o-work work -O0
+Z11 n@encoder@pulse@counter@top
+!i10b 1
+!s85 0
+Z12 !s108 1453918255.596000
+Z13 !s107 EncoderPulseCounterTop.vo|
+!s101 -O0
+vEncoderPulseCounterTop_vlg_check_tst
+!i10b 1
+Z14 !s100 V^HcJZz_IJ:_WYQI8EHB63
+Z15 IJ54NfThz;O_SJOQ;5J=eX3
+Z16 Vd00E1geDMVCHjiB<3g2PJ1
+R4
+R5
+Z17 8EncoderPulseCounterTop.vt
+Z18 FEncoderPulseCounterTop.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1453918255.829000
+Z20 !s107 EncoderPulseCounterTop.vt|
+Z21 !s90 -work|work|EncoderPulseCounterTop.vt|
+!s101 -O0
+R10
+Z22 n@encoder@pulse@counter@top_vlg_check_tst
+vEncoderPulseCounterTop_vlg_sample_tst
+!i10b 1
+Z23 !s100 FI^<@mE3M>]J6^@`hz6l_0
+Z24 IHOQig:@2JMCH]5;5KzF>M1
+Z25 V5G?^CW>P<5Qd9Xj4@Ck5=2
+R4
+R5
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z26 n@encoder@pulse@counter@top_vlg_sample_tst
+vEncoderPulseCounterTop_vlg_vec_tst
+!i10b 1
+!s100 gG2o4jd;N9bVnD@c?a?WG3
+I2L6XV<U[5Kn98aG^P5ENF1
+Z27 VCRn;jN9BWGYd`H`fD4VkL1
+R4
+R5
+R17
+R18
+Z28 L0 283
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+Z29 n@encoder@pulse@counter@top_vlg_vec_tst

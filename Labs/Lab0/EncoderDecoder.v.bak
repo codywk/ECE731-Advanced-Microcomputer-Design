@@ -1,0 +1,11 @@
+// Encoder/Decoder
+// EncoderDecoder.v
+// Author: Cody Kaufman
+// 1/21/15
+
+module EncoderDecoder(
+input A,
+input B,
+input clk,
+output change,
+output direction);

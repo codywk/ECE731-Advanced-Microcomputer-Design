@@ -1,0 +1,10 @@
+module EncoderPulseCounter #(WIDTH=8)(
+input A,
+input B,
+input clk,
+input ar,
+output [WIDTH:0] count);
+
+
+
+endmodule
