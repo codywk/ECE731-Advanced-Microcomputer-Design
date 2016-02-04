@@ -4,13 +4,15 @@
 // 1/21/16
 
 module UpDownCounter #(WIDTH=8)(
+	input enable,
+	input dir,
 	input clk,
-	input reset, 
-	input enable, //enable counting
-	input dir, //count up or down
-	output reg [WIDTH - 1:0] count //holds the total count 
-	);
+	input reset,
+	output reg [WIDTH - 1:0] count);
 	
+	//parameter WIDTH=8; // parameter to be passed in... default = 8
+	
+	//always @ (enable or ar) begin
 	always @ (posedge clk ) begin
 		if (~reset) begin
 			count <= 0;

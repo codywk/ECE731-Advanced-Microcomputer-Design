@@ -1,5 +1,5 @@
 Analysis & Synthesis report for QuadratureEncoderTop
-Wed Feb 03 13:39:14 2016
+Thu Feb 04 14:25:05 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -13,10 +13,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |QuadratureEncoderTop
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |QuadratureEncoderTop
+ 12. Parameter Settings for User Entity Instance: UpDownCounter:QuadPulseCounter
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -42,16 +45,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 03 13:39:14 2016           ;
+; Analysis & Synthesis Status        ; Successful - Thu Feb 04 14:25:05 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; QuadratureEncoderTop                            ;
 ; Top-level Entity Name              ; QuadratureEncoderTop                            ;
 ; Family                             ; Cyclone III                                     ;
-; Total logic elements               ; 0                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 0                                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 4                                               ;
+; Total logic elements               ; 363                                             ;
+;     Total combinational functions  ; 355                                             ;
+;     Dedicated logic registers      ; 38                                              ;
+; Total registers                    ; 38                                              ;
+; Total pins                         ; 6                                               ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -166,6 +169,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                                                       ; Library ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; UpDownCounter.v                  ; yes             ; User Verilog HDL File  ; C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/UpDownCounter.v        ;         ;
+; EncoderDecoder.v                 ; yes             ; User Verilog HDL File  ; C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/EncoderDecoder.v       ;         ;
+; EncoderDigitalFilter.v           ; yes             ; User Verilog HDL File  ; C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/EncoderDigitalFilter.v ;         ;
 ; QuadratureEncoderTop.v           ; yes             ; User Verilog HDL File  ; C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/QuadratureEncoderTop.v ;         ;
 +----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
@@ -175,38 +181,153 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
+; Estimated Total logic elements              ; 363   ;
 ;                                             ;       ;
-; Total combinational functions               ; 0     ;
+; Total combinational functions               ; 355   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
+;     -- 4 input functions                    ; 143   ;
+;     -- 3 input functions                    ; 134   ;
+;     -- <=2 input functions                  ; 78    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
+;     -- normal mode                          ; 260   ;
+;     -- arithmetic mode                      ; 95    ;
 ;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
+; Total registers                             ; 38    ;
+;     -- Dedicated logic registers            ; 38    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 4     ;
+; I/O pins                                    ; 6     ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 4     ;
-; Average fan-out                             ; 0.50  ;
+; Maximum fan-out node                        ; MvFwd ;
+; Maximum fan-out                             ; 110   ;
+; Total fan-out                               ; 1264  ;
+; Average fan-out                             ; 3.12  ;
 +---------------------------------------------+-------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
-; |QuadratureEncoderTop      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |QuadratureEncoderTop ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                     ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
+; |QuadratureEncoderTop                  ; 355 (324)         ; 38 (2)       ; 0           ; 0            ; 0       ; 0         ; 6    ; 0            ; |QuadratureEncoderTop                                   ; work         ;
+;    |EncoderDecoder:QuadratureEncoder|  ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |QuadratureEncoderTop|EncoderDecoder:QuadratureEncoder  ; work         ;
+;    |EncoderDigitalFilter:InputAFilter| ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |QuadratureEncoderTop|EncoderDigitalFilter:InputAFilter ; work         ;
+;    |EncoderDigitalFilter:InputBFilter| ; 1 (1)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |QuadratureEncoderTop|EncoderDigitalFilter:InputBFilter ; work         ;
+;    |UpDownCounter:QuadPulseCounter|    ; 27 (27)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |QuadratureEncoderTop|UpDownCounter:QuadPulseCounter    ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                 ;
++------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                           ; Latch Enable Signal ; Free of Timing Hazards ;
++------------------------------------------------------+---------------------+------------------------+
+; Fwd[12]                                              ; Trvl                ; yes                    ;
+; Fwd[13]                                              ; Trvl                ; yes                    ;
+; Fwd[14]                                              ; Trvl                ; yes                    ;
+; Fwd[15]                                              ; Trvl                ; yes                    ;
+; Fwd[16]                                              ; Trvl                ; yes                    ;
+; Fwd[17]                                              ; Trvl                ; yes                    ;
+; Fwd[18]                                              ; Trvl                ; yes                    ;
+; Fwd[19]                                              ; Trvl                ; yes                    ;
+; Fwd[20]                                              ; Trvl                ; yes                    ;
+; Fwd[21]                                              ; Trvl                ; yes                    ;
+; Fwd[22]                                              ; Trvl                ; yes                    ;
+; Fwd[23]                                              ; Trvl                ; yes                    ;
+; Fwd[24]                                              ; Trvl                ; yes                    ;
+; Fwd[25]                                              ; Trvl                ; yes                    ;
+; Fwd[26]                                              ; Trvl                ; yes                    ;
+; Fwd[27]                                              ; Trvl                ; yes                    ;
+; Fwd[28]                                              ; Trvl                ; yes                    ;
+; Fwd[29]                                              ; Trvl                ; yes                    ;
+; Fwd[30]                                              ; Trvl                ; yes                    ;
+; Fwd[31]                                              ; Trvl                ; yes                    ;
+; Fwd[32]                                              ; Trvl                ; yes                    ;
+; Fwd[33]                                              ; Trvl                ; yes                    ;
+; Fwd[34]                                              ; Trvl                ; yes                    ;
+; Fwd[35]                                              ; Trvl                ; yes                    ;
+; Fwd[36]                                              ; Trvl                ; yes                    ;
+; Fwd[37]                                              ; Trvl                ; yes                    ;
+; Bck[12]                                              ; Trvl                ; yes                    ;
+; Bck[13]                                              ; Trvl                ; yes                    ;
+; Bck[14]                                              ; Trvl                ; yes                    ;
+; Bck[15]                                              ; Trvl                ; yes                    ;
+; Bck[16]                                              ; Trvl                ; yes                    ;
+; Bck[17]                                              ; Trvl                ; yes                    ;
+; Bck[18]                                              ; Trvl                ; yes                    ;
+; Bck[19]                                              ; Trvl                ; yes                    ;
+; Bck[20]                                              ; Trvl                ; yes                    ;
+; Bck[21]                                              ; Trvl                ; yes                    ;
+; Bck[22]                                              ; Trvl                ; yes                    ;
+; Bck[23]                                              ; Trvl                ; yes                    ;
+; Bck[24]                                              ; Trvl                ; yes                    ;
+; Bck[25]                                              ; Trvl                ; yes                    ;
+; Bck[26]                                              ; Trvl                ; yes                    ;
+; Bck[27]                                              ; Trvl                ; yes                    ;
+; Bck[28]                                              ; Trvl                ; yes                    ;
+; Bck[29]                                              ; Trvl                ; yes                    ;
+; Bck[30]                                              ; Trvl                ; yes                    ;
+; Bck[31]                                              ; Trvl                ; yes                    ;
+; Bck[32]                                              ; Trvl                ; yes                    ;
+; Bck[33]                                              ; Trvl                ; yes                    ;
+; Bck[34]                                              ; Trvl                ; yes                    ;
+; Bck[35]                                              ; Trvl                ; yes                    ;
+; Bck[36]                                              ; Trvl                ; yes                    ;
+; Bck[37]                                              ; Trvl                ; yes                    ;
+; Fwd[11]                                              ; Trvl                ; yes                    ;
+; Fwd[10]                                              ; Trvl                ; yes                    ;
+; Fwd[9]                                               ; Trvl                ; yes                    ;
+; Fwd[8]                                               ; Trvl                ; yes                    ;
+; Fwd[7]                                               ; Trvl                ; yes                    ;
+; Fwd[6]                                               ; Trvl                ; yes                    ;
+; Fwd[5]                                               ; Trvl                ; yes                    ;
+; Fwd[4]                                               ; Trvl                ; yes                    ;
+; Fwd[3]                                               ; Trvl                ; yes                    ;
+; Fwd[2]                                               ; Trvl                ; yes                    ;
+; MP[12]                                               ; Trvl                ; yes                    ;
+; MP[13]                                               ; Trvl                ; yes                    ;
+; MP[14]                                               ; Trvl                ; yes                    ;
+; MP[15]                                               ; Trvl                ; yes                    ;
+; MP[16]                                               ; Trvl                ; yes                    ;
+; MP[17]                                               ; Trvl                ; yes                    ;
+; MP[18]                                               ; Trvl                ; yes                    ;
+; MP[19]                                               ; Trvl                ; yes                    ;
+; MP[20]                                               ; Trvl                ; yes                    ;
+; MP[21]                                               ; Trvl                ; yes                    ;
+; MP[22]                                               ; Trvl                ; yes                    ;
+; MP[23]                                               ; Trvl                ; yes                    ;
+; MP[24]                                               ; Trvl                ; yes                    ;
+; MP[25]                                               ; Trvl                ; yes                    ;
+; MP[26]                                               ; Trvl                ; yes                    ;
+; MP[27]                                               ; Trvl                ; yes                    ;
+; MP[28]                                               ; Trvl                ; yes                    ;
+; MP[29]                                               ; Trvl                ; yes                    ;
+; MP[30]                                               ; Trvl                ; yes                    ;
+; MP[31]                                               ; Trvl                ; yes                    ;
+; MP[32]                                               ; Trvl                ; yes                    ;
+; MP[33]                                               ; Trvl                ; yes                    ;
+; MP[34]                                               ; Trvl                ; yes                    ;
+; MP[35]                                               ; Trvl                ; yes                    ;
+; MP[36]                                               ; Trvl                ; yes                    ;
+; MP[37]                                               ; Trvl                ; yes                    ;
+; Bck[11]                                              ; Trvl                ; yes                    ;
+; Bck[10]                                              ; Trvl                ; yes                    ;
+; Bck[9]                                               ; Trvl                ; yes                    ;
+; Bck[8]                                               ; Trvl                ; yes                    ;
+; Bck[7]                                               ; Trvl                ; yes                    ;
+; Bck[6]                                               ; Trvl                ; yes                    ;
+; Bck[5]                                               ; Trvl                ; yes                    ;
+; Bck[4]                                               ; Trvl                ; yes                    ;
+; Bck[3]                                               ; Trvl                ; yes                    ;
+; Bck[2]                                               ; Trvl                ; yes                    ;
+; MP[11]                                               ; Trvl                ; yes                    ;
+; MP[10]                                               ; Trvl                ; yes                    ;
+; Number of user-specified and inferred latches = 108  ;                     ;                        ;
++------------------------------------------------------+---------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -214,14 +335,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 26    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |QuadratureEncoderTop|UpDownCounter:QuadPulseCounter|count[25] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------+
@@ -230,10 +360,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Parameter Name ; Value ; Type                                                        ;
 +----------------+-------+-------------------------------------------------------------+
 ; N              ; 38    ; Signed Integer                                              ;
-; encCount       ; 26    ; Signed Integer                                              ;
+; encCountBits   ; 26    ; Signed Integer                                              ;
 ; precBits       ; 12    ; Signed Integer                                              ;
 ; stp            ; 21516 ; Signed Integer                                              ;
 +----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: UpDownCounter:QuadPulseCounter ;
++----------------+-------+----------------------------------------------------+
+; Parameter Name ; Value ; Type                                               ;
++----------------+-------+----------------------------------------------------+
+; WIDTH          ; 26    ; Signed Integer                                     ;
++----------------+-------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -252,7 +392,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Wed Feb 03 13:39:10 2016
+    Info: Processing started: Thu Feb 04 14:25:02 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off QuadratureEncoderTop -c QuadratureEncoderTop
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file updowncounter.v
@@ -264,21 +404,344 @@ Info (12021): Found 1 design units, including 1 entities, in source file encoder
 Info (12021): Found 1 design units, including 1 entities, in source file quadratureencodertop.v
     Info (12023): Found entity 1: QuadratureEncoderTop
 Info (12127): Elaborating entity "QuadratureEncoderTop" for the top level hierarchy
-Warning (12158): Entity "QuadratureEncoderTop" contains only dangling pins
+Info (10041): Inferred latch for "Bck[2]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[3]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[4]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[5]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[6]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[7]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[8]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[9]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[10]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[11]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[12]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[13]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[14]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[15]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[16]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[17]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[18]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[19]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[20]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[21]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[22]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[23]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[24]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[25]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[26]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[27]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[28]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[29]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[30]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[31]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[32]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[33]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[34]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[35]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[36]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "Bck[37]" at QuadratureEncoderTop.v(28)
+Info (10041): Inferred latch for "MP[2]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[3]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[4]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[5]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[6]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[7]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[8]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[9]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[10]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[11]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[12]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[13]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[14]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[15]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[16]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[17]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[18]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[19]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[20]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[21]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[22]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[23]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[24]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[25]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[26]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[27]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[28]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[29]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[30]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[31]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[32]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[33]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[34]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[35]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[36]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "MP[37]" at QuadratureEncoderTop.v(27)
+Info (10041): Inferred latch for "Fwd[2]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[3]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[4]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[5]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[6]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[7]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[8]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[9]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[10]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[11]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[12]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[13]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[14]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[15]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[16]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[17]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[18]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[19]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[20]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[21]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[22]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[23]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[24]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[25]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[26]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[27]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[28]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[29]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[30]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[31]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[32]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[33]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[34]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[35]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[36]" at QuadratureEncoderTop.v(26)
+Info (10041): Inferred latch for "Fwd[37]" at QuadratureEncoderTop.v(26)
+Info (12128): Elaborating entity "EncoderDigitalFilter" for hierarchy "EncoderDigitalFilter:InputAFilter"
+Info (12128): Elaborating entity "EncoderDecoder" for hierarchy "EncoderDecoder:QuadratureEncoder"
+Info (12128): Elaborating entity "UpDownCounter" for hierarchy "UpDownCounter:QuadPulseCounter"
+Warning (13012): Latch Fwd[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[32] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[33] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[34] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[35] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[36] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[37] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[32] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[33] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[34] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[35] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[36] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[37] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Fwd[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[12] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[13] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[14] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[15] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[16] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[17] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[18] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[19] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[20] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[21] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[22] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[23] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[24] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[25] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[26] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[27] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[28] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[29] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[30] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[31] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[32] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[33] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[34] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[35] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[36] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[37] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch Bck[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[11] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[10] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[9] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[8] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[7] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[6] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[5] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[4] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Warning (13012): Latch MP[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal MvFwd
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk"
-    Warning (15610): No output dependent on input pin "reset"
-    Warning (15610): No output dependent on input pin "A"
-    Warning (15610): No output dependent on input pin "B"
-Info (21057): Implemented 4 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 370 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 0 output pins
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info (21059): Implemented 2 output pins
+    Info (21061): Implemented 364 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 217 warnings
     Info: Peak virtual memory: 472 megabytes
-    Info: Processing ended: Wed Feb 03 13:39:14 2016
-    Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Thu Feb 04 14:25:05 2016
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:03
 
 
