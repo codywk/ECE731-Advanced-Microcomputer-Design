@@ -5,6 +5,32 @@ A => A.IN1
 B => B.IN1
 Trvl <= Trvl.DB_MAX_OUTPUT_PORT_TYPE
 FwdBck <= MvFwd.DB_MAX_OUTPUT_PORT_TYPE
+encCount[0] <= UpDownCounter:QuadPulseCounter.count
+encCount[1] <= UpDownCounter:QuadPulseCounter.count
+encCount[2] <= UpDownCounter:QuadPulseCounter.count
+encCount[3] <= UpDownCounter:QuadPulseCounter.count
+encCount[4] <= UpDownCounter:QuadPulseCounter.count
+encCount[5] <= UpDownCounter:QuadPulseCounter.count
+encCount[6] <= UpDownCounter:QuadPulseCounter.count
+encCount[7] <= UpDownCounter:QuadPulseCounter.count
+encCount[8] <= UpDownCounter:QuadPulseCounter.count
+encCount[9] <= UpDownCounter:QuadPulseCounter.count
+encCount[10] <= UpDownCounter:QuadPulseCounter.count
+encCount[11] <= UpDownCounter:QuadPulseCounter.count
+encCount[12] <= UpDownCounter:QuadPulseCounter.count
+encCount[13] <= UpDownCounter:QuadPulseCounter.count
+encCount[14] <= UpDownCounter:QuadPulseCounter.count
+encCount[15] <= UpDownCounter:QuadPulseCounter.count
+encCount[16] <= UpDownCounter:QuadPulseCounter.count
+encCount[17] <= UpDownCounter:QuadPulseCounter.count
+encCount[18] <= UpDownCounter:QuadPulseCounter.count
+encCount[19] <= UpDownCounter:QuadPulseCounter.count
+encCount[20] <= UpDownCounter:QuadPulseCounter.count
+encCount[21] <= UpDownCounter:QuadPulseCounter.count
+encCount[22] <= UpDownCounter:QuadPulseCounter.count
+encCount[23] <= UpDownCounter:QuadPulseCounter.count
+encCount[24] <= UpDownCounter:QuadPulseCounter.count
+encCount[25] <= UpDownCounter:QuadPulseCounter.count
 
 
 |QuadratureEncoderTop|EncoderDigitalFilter:InputAFilter

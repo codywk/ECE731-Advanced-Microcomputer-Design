@@ -1,0 +1,722 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "02/04/2016 14:45:34"
+                                                                        
+// Verilog Self-Checking Test Bench (with test vectors) for design :    QuadratureEncoderTop
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module QuadratureEncoderTop_vlg_sample_tst(
+	A,
+	B,
+	clk,
+	reset,
+	sampler_tx
+);
+input  A;
+input  B;
+input  clk;
+input  reset;
+output sampler_tx;
+
+reg sample;
+time current_time;
+always @(A or B or clk or reset)
+                                                                                
+begin                                                 
+ if ($realtime > 0)                                   
+ begin                                                
+	if ($realtime == 0 || $realtime != current_time)  
+	begin									          
+		if (sample === 1'bx)                          
+			sample = 0;                               
+		else                                          
+			sample = ~sample;                         
+	end										          
+	current_time = $realtime;					      
+ end                                                  
+end                                                   
+
+assign sampler_tx = sample;
+endmodule
+
+module QuadratureEncoderTop_vlg_check_tst (
+	FwdBck,
+	Trvl,
+	encCount,
+	sampler_rx
+);
+input  FwdBck;
+input  Trvl;
+input [25:0] encCount;
+input sampler_rx;
+
+reg  FwdBck_expected;
+reg  Trvl_expected;
+reg [25:0] encCount_expected;
+
+reg  FwdBck_prev;
+reg  Trvl_prev;
+reg [25:0] encCount_prev;
+
+reg [25:0] encCount_expected_prev;
+
+reg [25:0] last_encCount_exp;
+
+reg trigger;
+
+integer i;
+integer nummismatches;
+
+reg [1:3] on_first_change ;
+
+
+initial
+begin
+trigger = 0;
+i = 0;
+nummismatches = 0;
+on_first_change = 3'b1;
+end
+
+// update real /o prevs
+
+always @(trigger)
+begin
+	FwdBck_prev = FwdBck;
+	Trvl_prev = Trvl;
+	encCount_prev = encCount;
+end
+
+// update expected /o prevs
+
+always @(trigger)
+begin
+	encCount_expected_prev = encCount_expected;
+end
+
+
+// expected encCount[ 25 ]
+initial
+begin
+	encCount_expected[25] = 1'bX;
+	encCount_expected[25] = #999000 1'b0;
+end 
+// expected encCount[ 24 ]
+initial
+begin
+	encCount_expected[24] = 1'bX;
+	encCount_expected[24] = #999000 1'b0;
+end 
+// expected encCount[ 23 ]
+initial
+begin
+	encCount_expected[23] = 1'bX;
+	encCount_expected[23] = #999000 1'b0;
+end 
+// expected encCount[ 22 ]
+initial
+begin
+	encCount_expected[22] = 1'bX;
+	encCount_expected[22] = #999000 1'b0;
+end 
+// expected encCount[ 21 ]
+initial
+begin
+	encCount_expected[21] = 1'bX;
+	encCount_expected[21] = #999000 1'b0;
+end 
+// expected encCount[ 20 ]
+initial
+begin
+	encCount_expected[20] = 1'bX;
+	encCount_expected[20] = #999000 1'b0;
+end 
+// expected encCount[ 19 ]
+initial
+begin
+	encCount_expected[19] = 1'bX;
+	encCount_expected[19] = #999000 1'b0;
+end 
+// expected encCount[ 18 ]
+initial
+begin
+	encCount_expected[18] = 1'bX;
+	encCount_expected[18] = #999000 1'b0;
+end 
+// expected encCount[ 17 ]
+initial
+begin
+	encCount_expected[17] = 1'bX;
+	encCount_expected[17] = #999000 1'b0;
+end 
+// expected encCount[ 16 ]
+initial
+begin
+	encCount_expected[16] = 1'bX;
+	encCount_expected[16] = #999000 1'b0;
+end 
+// expected encCount[ 15 ]
+initial
+begin
+	encCount_expected[15] = 1'bX;
+	encCount_expected[15] = #999000 1'b0;
+end 
+// expected encCount[ 14 ]
+initial
+begin
+	encCount_expected[14] = 1'bX;
+	encCount_expected[14] = #999000 1'b0;
+end 
+// expected encCount[ 13 ]
+initial
+begin
+	encCount_expected[13] = 1'bX;
+	encCount_expected[13] = #999000 1'b0;
+end 
+// expected encCount[ 12 ]
+initial
+begin
+	encCount_expected[12] = 1'bX;
+	encCount_expected[12] = #999000 1'b0;
+end 
+// expected encCount[ 11 ]
+initial
+begin
+	encCount_expected[11] = 1'bX;
+	encCount_expected[11] = #999000 1'b0;
+end 
+// expected encCount[ 10 ]
+initial
+begin
+	encCount_expected[10] = 1'bX;
+	encCount_expected[10] = #999000 1'b0;
+end 
+// expected encCount[ 9 ]
+initial
+begin
+	encCount_expected[9] = 1'bX;
+	encCount_expected[9] = #999000 1'b0;
+end 
+// expected encCount[ 8 ]
+initial
+begin
+	encCount_expected[8] = 1'bX;
+	encCount_expected[8] = #999000 1'b0;
+end 
+// expected encCount[ 7 ]
+initial
+begin
+	encCount_expected[7] = 1'bX;
+	encCount_expected[7] = #999000 1'b0;
+end 
+// expected encCount[ 6 ]
+initial
+begin
+	encCount_expected[6] = 1'bX;
+	encCount_expected[6] = #999000 1'b0;
+end 
+// expected encCount[ 5 ]
+initial
+begin
+	encCount_expected[5] = 1'bX;
+	encCount_expected[5] = #999000 1'b0;
+end 
+// expected encCount[ 4 ]
+initial
+begin
+	encCount_expected[4] = 1'bX;
+	encCount_expected[4] = #999000 1'b0;
+end 
+// expected encCount[ 3 ]
+initial
+begin
+	encCount_expected[3] = 1'bX;
+	encCount_expected[3] = #999000 1'b0;
+end 
+// expected encCount[ 2 ]
+initial
+begin
+	encCount_expected[2] = 1'bX;
+	encCount_expected[2] = #999000 1'b0;
+end 
+// expected encCount[ 1 ]
+initial
+begin
+	encCount_expected[1] = 1'bX;
+	encCount_expected[1] = #999000 1'b0;
+end 
+// expected encCount[ 0 ]
+initial
+begin
+	encCount_expected[0] = 1'bX;
+	encCount_expected[0] = #999000 1'b0;
+end 
+// generate trigger
+always @(FwdBck_expected or FwdBck or Trvl_expected or Trvl or encCount_expected or encCount)
+begin
+	trigger <= ~trigger;
+end
+
+always @(posedge sampler_rx or negedge sampler_rx)
+begin
+`ifdef debug_tbench
+	$display("Scanning pattern %d @time = %t",i,$realtime );
+	i = i + 1;
+	$display("| expected FwdBck = %b | expected Trvl = %b | expected encCount = %b | ",FwdBck_expected_prev,Trvl_expected_prev,encCount_expected_prev);
+	$display("| real FwdBck = %b | real Trvl = %b | real encCount = %b | ",FwdBck_prev,Trvl_prev,encCount_prev);
+`endif
+	if (
+		( encCount_expected_prev[0] !== 1'bx ) && ( encCount_prev[0] !== encCount_expected_prev[0] )
+		&& ((encCount_expected_prev[0] !== last_encCount_exp[0]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[0] = encCount_expected_prev[0];
+	end
+	if (
+		( encCount_expected_prev[1] !== 1'bx ) && ( encCount_prev[1] !== encCount_expected_prev[1] )
+		&& ((encCount_expected_prev[1] !== last_encCount_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[1] = encCount_expected_prev[1];
+	end
+	if (
+		( encCount_expected_prev[2] !== 1'bx ) && ( encCount_prev[2] !== encCount_expected_prev[2] )
+		&& ((encCount_expected_prev[2] !== last_encCount_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[2] = encCount_expected_prev[2];
+	end
+	if (
+		( encCount_expected_prev[3] !== 1'bx ) && ( encCount_prev[3] !== encCount_expected_prev[3] )
+		&& ((encCount_expected_prev[3] !== last_encCount_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[3] = encCount_expected_prev[3];
+	end
+	if (
+		( encCount_expected_prev[4] !== 1'bx ) && ( encCount_prev[4] !== encCount_expected_prev[4] )
+		&& ((encCount_expected_prev[4] !== last_encCount_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[4] = encCount_expected_prev[4];
+	end
+	if (
+		( encCount_expected_prev[5] !== 1'bx ) && ( encCount_prev[5] !== encCount_expected_prev[5] )
+		&& ((encCount_expected_prev[5] !== last_encCount_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[5] = encCount_expected_prev[5];
+	end
+	if (
+		( encCount_expected_prev[6] !== 1'bx ) && ( encCount_prev[6] !== encCount_expected_prev[6] )
+		&& ((encCount_expected_prev[6] !== last_encCount_exp[6]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[6] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[6] = encCount_expected_prev[6];
+	end
+	if (
+		( encCount_expected_prev[7] !== 1'bx ) && ( encCount_prev[7] !== encCount_expected_prev[7] )
+		&& ((encCount_expected_prev[7] !== last_encCount_exp[7]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[7] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[7] = encCount_expected_prev[7];
+	end
+	if (
+		( encCount_expected_prev[8] !== 1'bx ) && ( encCount_prev[8] !== encCount_expected_prev[8] )
+		&& ((encCount_expected_prev[8] !== last_encCount_exp[8]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[8] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[8] = encCount_expected_prev[8];
+	end
+	if (
+		( encCount_expected_prev[9] !== 1'bx ) && ( encCount_prev[9] !== encCount_expected_prev[9] )
+		&& ((encCount_expected_prev[9] !== last_encCount_exp[9]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[9] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[9] = encCount_expected_prev[9];
+	end
+	if (
+		( encCount_expected_prev[10] !== 1'bx ) && ( encCount_prev[10] !== encCount_expected_prev[10] )
+		&& ((encCount_expected_prev[10] !== last_encCount_exp[10]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[10] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[10] = encCount_expected_prev[10];
+	end
+	if (
+		( encCount_expected_prev[11] !== 1'bx ) && ( encCount_prev[11] !== encCount_expected_prev[11] )
+		&& ((encCount_expected_prev[11] !== last_encCount_exp[11]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[11] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[11] = encCount_expected_prev[11];
+	end
+	if (
+		( encCount_expected_prev[12] !== 1'bx ) && ( encCount_prev[12] !== encCount_expected_prev[12] )
+		&& ((encCount_expected_prev[12] !== last_encCount_exp[12]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[12] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[12] = encCount_expected_prev[12];
+	end
+	if (
+		( encCount_expected_prev[13] !== 1'bx ) && ( encCount_prev[13] !== encCount_expected_prev[13] )
+		&& ((encCount_expected_prev[13] !== last_encCount_exp[13]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[13] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[13] = encCount_expected_prev[13];
+	end
+	if (
+		( encCount_expected_prev[14] !== 1'bx ) && ( encCount_prev[14] !== encCount_expected_prev[14] )
+		&& ((encCount_expected_prev[14] !== last_encCount_exp[14]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[14] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[14] = encCount_expected_prev[14];
+	end
+	if (
+		( encCount_expected_prev[15] !== 1'bx ) && ( encCount_prev[15] !== encCount_expected_prev[15] )
+		&& ((encCount_expected_prev[15] !== last_encCount_exp[15]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[15] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[15] = encCount_expected_prev[15];
+	end
+	if (
+		( encCount_expected_prev[16] !== 1'bx ) && ( encCount_prev[16] !== encCount_expected_prev[16] )
+		&& ((encCount_expected_prev[16] !== last_encCount_exp[16]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[16] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[16] = encCount_expected_prev[16];
+	end
+	if (
+		( encCount_expected_prev[17] !== 1'bx ) && ( encCount_prev[17] !== encCount_expected_prev[17] )
+		&& ((encCount_expected_prev[17] !== last_encCount_exp[17]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[17] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[17] = encCount_expected_prev[17];
+	end
+	if (
+		( encCount_expected_prev[18] !== 1'bx ) && ( encCount_prev[18] !== encCount_expected_prev[18] )
+		&& ((encCount_expected_prev[18] !== last_encCount_exp[18]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[18] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[18] = encCount_expected_prev[18];
+	end
+	if (
+		( encCount_expected_prev[19] !== 1'bx ) && ( encCount_prev[19] !== encCount_expected_prev[19] )
+		&& ((encCount_expected_prev[19] !== last_encCount_exp[19]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[19] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[19] = encCount_expected_prev[19];
+	end
+	if (
+		( encCount_expected_prev[20] !== 1'bx ) && ( encCount_prev[20] !== encCount_expected_prev[20] )
+		&& ((encCount_expected_prev[20] !== last_encCount_exp[20]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[20] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[20] = encCount_expected_prev[20];
+	end
+	if (
+		( encCount_expected_prev[21] !== 1'bx ) && ( encCount_prev[21] !== encCount_expected_prev[21] )
+		&& ((encCount_expected_prev[21] !== last_encCount_exp[21]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[21] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[21] = encCount_expected_prev[21];
+	end
+	if (
+		( encCount_expected_prev[22] !== 1'bx ) && ( encCount_prev[22] !== encCount_expected_prev[22] )
+		&& ((encCount_expected_prev[22] !== last_encCount_exp[22]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[22] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[22] = encCount_expected_prev[22];
+	end
+	if (
+		( encCount_expected_prev[23] !== 1'bx ) && ( encCount_prev[23] !== encCount_expected_prev[23] )
+		&& ((encCount_expected_prev[23] !== last_encCount_exp[23]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[23] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[23] = encCount_expected_prev[23];
+	end
+	if (
+		( encCount_expected_prev[24] !== 1'bx ) && ( encCount_prev[24] !== encCount_expected_prev[24] )
+		&& ((encCount_expected_prev[24] !== last_encCount_exp[24]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[24] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[24] = encCount_expected_prev[24];
+	end
+	if (
+		( encCount_expected_prev[25] !== 1'bx ) && ( encCount_prev[25] !== encCount_expected_prev[25] )
+		&& ((encCount_expected_prev[25] !== last_encCount_exp[25]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port encCount[25] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", encCount_expected_prev);
+		$display ("     Real value = %b", encCount_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_encCount_exp[25] = encCount_expected_prev[25];
+	end
+
+	trigger <= ~trigger;
+end
+initial 
+
+begin 
+$timeformat(-12,3," ps",6);
+#10000000;
+if (nummismatches > 0)
+	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
+else
+	$display ("Simulation passed !");
+$finish;
+end 
+endmodule
+
+module QuadratureEncoderTop_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg A;
+reg B;
+reg clk;
+reg reset;
+// wires                                               
+wire FwdBck;
+wire Trvl;
+wire [25:0] encCount;
+
+wire sampler;                             
+
+// assign statements (if any)                          
+QuadratureEncoderTop i1 (
+// port map - connection between master ports and signals/registers   
+	.A(A),
+	.B(B),
+	.FwdBck(FwdBck),
+	.Trvl(Trvl),
+	.clk(clk),
+	.encCount(encCount),
+	.reset(reset)
+);
+
+// clk
+always
+begin
+	clk = 1'b0;
+	clk = #5000 1'b1;
+	#5000;
+end 
+
+// reset
+initial
+begin
+	reset = 1'b1;
+	reset = #30000 1'b0;
+end 
+
+// A
+always
+begin
+	A = 1'b0;
+	A = #50000 1'b1;
+	#50000;
+end 
+
+// B
+initial
+begin
+	B = 1'b1;
+	# 25000;
+	repeat(99)
+	begin
+		B = 1'b0;
+		B = #50000 1'b1;
+		# 50000;
+	end
+	B = 1'b0;
+	B = #50000 1'b1;
+end 
+
+QuadratureEncoderTop_vlg_sample_tst tb_sample (
+	.A(A),
+	.B(B),
+	.clk(clk),
+	.reset(reset),
+	.sampler_tx(sampler)
+);
+
+QuadratureEncoderTop_vlg_check_tst tb_out(
+	.FwdBck(FwdBck),
+	.Trvl(Trvl),
+	.encCount(encCount),
+	.sampler_rx(sampler)
+);
+endmodule
+

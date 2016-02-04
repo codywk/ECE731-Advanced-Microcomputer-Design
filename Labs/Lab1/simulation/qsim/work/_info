@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Cody\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
+vQuadratureEncoderTop
+Z1 !s100 eVDOkIFe`FdCaD86QEI[22
+Z2 I:c[mF?fGLGjHgh=zeJ6Yo2
+Z3 V3[@IzQGQag_YKdNRL`k3V0
+Z4 dC:\Users\Cody\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
+Z5 w1454618735
+Z6 8QuadratureEncoderTop.vo
+Z7 FQuadratureEncoderTop.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|QuadratureEncoderTop.vo|
+Z10 o-work work -O0
+Z11 n@quadrature@encoder@top
+!i10b 1
+!s85 0
+Z12 !s108 1454618737.161000
+Z13 !s107 QuadratureEncoderTop.vo|
+!s101 -O0
+vQuadratureEncoderTop_vlg_check_tst
+!i10b 1
+!s100 @XOXF8I@[@gM2W]a?fNgb2
+INN<GU?<8GR;@fzhj7=nfn0
+Z14 V>QgYoEDK>zFa7bhczhBRl3
+R4
+Z15 w1454618734
+Z16 8QuadratureEncoderTop.vt
+Z17 FQuadratureEncoderTop.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z18 !s108 1454618737.735000
+Z19 !s107 QuadratureEncoderTop.vt|
+Z20 !s90 -work|work|QuadratureEncoderTop.vt|
+!s101 -O0
+R10
+Z21 n@quadrature@encoder@top_vlg_check_tst
+vQuadratureEncoderTop_vlg_sample_tst
+!i10b 1
+Z22 !s100 k?zR6FXMDR6dToETSDe8@3
+Z23 I5Zan@?=o]0EBQL8SKU^la2
+Z24 VYPKWJ[VM1CS=hl5S<eHU@2
+R4
+R15
+R16
+R17
+L0 29
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z25 n@quadrature@encoder@top_vlg_sample_tst
+vQuadratureEncoderTop_vlg_vec_tst
+!i10b 1
+!s100 S4bMmbCePbHAk;>ZOQ@V_2
+IK]=:c[dzkd:TSRK8O13lA1
+Z26 V11PYGePWBOWU?KUnW8B0H3
+R4
+R15
+R16
+R17
+Z27 L0 643
+R8
+r1
+!s85 0
+31
+R18
+R19
+R20
+!s101 -O0
+R10
+Z28 n@quadrature@encoder@top_vlg_vec_tst

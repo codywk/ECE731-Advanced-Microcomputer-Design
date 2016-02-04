@@ -4,7 +4,8 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	input A,
 	input B,
 	output Trvl,
-	output FwdBck // forward or backwards motion	
+	output FwdBck, // forward or backwards motion	
+	output[encCountBits - 1 : 0] encCount
 	);
 	
 	wire[N - 1 : 0] Fwd, MP, Bck; // these registers will save the values for specific points to keep track of total
@@ -12,7 +13,7 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	wire _A, _B; //represent filtered signals
 	wire dir;
 	wire change; //was there an encoder pulse 
-	wire[encCountBits - 1 : 0] encCount; //current encoder pulse count
+	//wire[encCountBits - 1 : 0] encCount; //current encoder pulse count
 	
 	//initialize modules used in motion detection sytem
 	EncoderDigitalFilter 			InputAFilter(.clk(clk), .sig(A), .filteredSig(_A));
