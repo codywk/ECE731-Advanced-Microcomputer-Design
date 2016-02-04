@@ -17,18 +17,15 @@
 # Loading work.QuadratureEncoderTop_vlg_vec_tst
 # Loading work.QuadratureEncoderTop
 # Loading cycloneiii_ver.cycloneiii_lcell_comb
-# Loading altera_ver.dffeas
 # Loading cycloneiii_ver.cycloneiii_io_obuf
 # Loading cycloneiii_ver.cycloneiii_io_ibuf
+# Loading altera_ver.dffeas
 # Loading cycloneiii_ver.cycloneiii_clkctrl
 # Loading cycloneiii_ver.cycloneiii_mux41
 # Loading cycloneiii_ver.cycloneiii_ena_reg
 # Loading work.QuadratureEncoderTop_vlg_sample_tst
 # Loading work.QuadratureEncoderTop_vlg_check_tst
 # Loading altera_ver.PRIM_GDFF_LOW
-# ERROR! Vector Mismatch for output port encCount[0] :: @time = 1010000.000 ps
-#      Expected value = 00000000000000000000000000
-#      Real value = 00000000000000000000000001
-#           1 mismatched vectors : Simulation failed !
-# ** Note: $finish    : QuadratureEncoderTop.vt(639)
-#    Time: 10 us  Iteration: 0  Instance: /QuadratureEncoderTop_vlg_vec_tst/tb_out
+# Simulation passed !
+# ** Note: $finish    : QuadratureEncoderTop.vt(2733)
+#    Time: 1 us  Iteration: 0  Instance: /QuadratureEncoderTop_vlg_vec_tst/tb_out
