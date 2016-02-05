@@ -7,6 +7,7 @@ entity QuadratureEncoderTop_vlg_check_tst is
         back            : in     vl_logic_vector(37 downto 0);
         encCount        : in     vl_logic_vector(25 downto 0);
         forward         : in     vl_logic_vector(37 downto 0);
+        inches          : in     vl_logic_vector(19 downto 0);
         mid             : in     vl_logic_vector(37 downto 0);
         sampler_rx      : in     vl_logic
     );

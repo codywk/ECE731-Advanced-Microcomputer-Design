@@ -4,56 +4,56 @@ K3
 cModel Technology
 Z0 dC:\Users\Cody\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
 vQuadratureEncoderTop
-Z1 IP?f[5H17<=g1blgTWHEdX1
-Z2 V_oL?]G7@A<l`oSOgJ<WlP2
-Z3 dC:\Users\Cody\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
-Z4 w1454624190
-Z5 8QuadratureEncoderTop.vo
-Z6 FQuadratureEncoderTop.vo
+Z1 !s100 ^H]cne9>1zR_fSUT;4HG`0
+Z2 Im@RzXdmn<FDo9]_cfklmS3
+Z3 VKanf<Am:CSSX?OM]@6=G[1
+Z4 dC:\Users\Cody\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
+Z5 w1454692238
+Z6 8QuadratureEncoderTop.vo
+Z7 FQuadratureEncoderTop.vo
 L0 31
-Z7 OV;L;10.1d;51
+Z8 OV;L;10.1d;51
 r1
 31
-Z8 !s90 -work|work|QuadratureEncoderTop.vo|
-Z9 o-work work -O0
-Z10 n@quadrature@encoder@top
+Z9 !s90 -work|work|QuadratureEncoderTop.vo|
+Z10 o-work work -O0
+Z11 n@quadrature@encoder@top
 !i10b 1
-Z11 !s100 14iS^PLz61J@<:Xd91]NR2
 !s85 0
-Z12 !s108 1454624191.594000
+Z12 !s108 1454692239.181000
 Z13 !s107 QuadratureEncoderTop.vo|
 !s101 -O0
 vQuadratureEncoderTop_vlg_check_tst
 !i10b 1
-Z14 !s100 <nBncz<0hXN`oh=;Xc@7l3
-Z15 InIYS6aa1N7;]jHUmRFaF`0
-Z16 VX;W:VDJP1FHN83OY6X<oU1
-R3
-Z17 w1454624189
+Z14 !s100 [ZDl^^TEH4iKl<D3l20@J1
+Z15 IWa4IGaUc1Z0KOIMl2e1C>1
+Z16 Vc_i1U9;Fo^Ka@Xn<i<dM23
+R4
+Z17 w1454692237
 Z18 8QuadratureEncoderTop.vt
 Z19 FQuadratureEncoderTop.vt
 L0 63
-R7
+R8
 r1
 !s85 0
 31
-Z20 !s108 1454624191.998000
+Z20 !s108 1454692239.530000
 Z21 !s107 QuadratureEncoderTop.vt|
 Z22 !s90 -work|work|QuadratureEncoderTop.vt|
 !s101 -O0
-R9
+R10
 Z23 n@quadrature@encoder@top_vlg_check_tst
 vQuadratureEncoderTop_vlg_sample_tst
 !i10b 1
 Z24 !s100 k?zR6FXMDR6dToETSDe8@3
 Z25 I5Zan@?=o]0EBQL8SKU^la2
 Z26 VYPKWJ[VM1CS=hl5S<eHU@2
-R3
+R4
 R17
 R18
 R19
 L0 29
-R7
+R8
 r1
 !s85 0
 31
@@ -61,19 +61,19 @@ R20
 R21
 R22
 !s101 -O0
-R9
+R10
 Z27 n@quadrature@encoder@top_vlg_sample_tst
 vQuadratureEncoderTop_vlg_vec_tst
 !i10b 1
-Z28 !s100 4e[81Iz700SVO4oFcNnlh3
-Z29 IFTeRO6Yo9?lnGil2I333T0
-Z30 V11PYGePWBOWU?KUnW8B0H3
-R3
+!s100 ?9Rj>JJVE5@IeK6hUBM>`1
+IM1IoQR:_a[?Fb2e40BTTO3
+Z28 V11PYGePWBOWU?KUnW8B0H3
+R4
 R17
 R18
 R19
-Z31 L0 2737
-R7
+Z29 L0 3267
+R8
 r1
 !s85 0
 31
@@ -81,5 +81,5 @@ R20
 R21
 R22
 !s101 -O0
-R9
-Z32 n@quadrature@encoder@top_vlg_vec_tst
+R10
+Z30 n@quadrature@encoder@top_vlg_vec_tst

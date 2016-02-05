@@ -6,13 +6,15 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	output Trvl,
 	output FwdBck, // forward or backwards motion	
 	output[encCountBits - 1 : 0] encCount,
-	output[N - 1 : 0] forward, back, mid
+	output[N - 1 : 0] forward, back, mid,
+	output reg[19:0] inches
 	);
+		
+	reg[N - 1 : 0] Fwd, MP, Bck; // these signals will save the values for specific points to keep track of total
 	
-	wire[N - 1 : 0] Fwd, MP, Bck; // these registers will save the values for specific points to keep track of total
-	reg MvFwd, MvBck; //represents the direction of travel
 	wire _A, _B; //represent filtered signals
-	wire dir;
+	wire MvFwd, MvBck; //represents the direction of travel in our QuadEncoder
+	wire dir; //internal signal for encoder counter and updownCounter
 	wire change; //was there an encoder pulse
 	
 	//initialize modules used in motion detection sytem
@@ -21,28 +23,28 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	EncoderDecoder 					QuadratureEncoder(.clk(clk), .A(_A), .B(_B), .change(change), .direction(dir));
 	UpDownCounter #(encCountBits) QuadPulseCounter(.clk(clk), .reset(reset), .enable(change), .dir(dir), .count(encCount));
 	
-	//assign internal signals 
+	//assign internal signals
+	assign MvFwd = (encCount == Fwd[N - 1 : precBits]);
+	assign MvBck = (encCount == Bck[N - 1 : precBits]);
 	assign Trvl = MvFwd | MvBck;
 	assign FwdBck = MvFwd;
-	assign Fwd = reset ? (stp) :(Trvl ? (FwdBck ? (Fwd + stp) : (MP) ) : (Fwd));
-	assign MP  = reset ? (0) : (Trvl ? (FwdBck ? (Fwd) : (Bck) ) : (MP));
-	assign Bck = reset ? (-stp) : (Trvl ? (FwdBck ? (MP) : (Bck - stp) ) : (Bck));
+	
+	//variables for debugging
 	assign forward = Fwd;
 	assign back = Bck;
 	assign mid = MP;
 	
-	always @ (posedge clk) begin
+	always @(posedge clk) begin
+	
+		Fwd <= ~reset ? (stp) :(Trvl ? (FwdBck ? (Fwd + stp) : (MP) ) : (Fwd));
+		MP  <= ~reset ? (0) : (Trvl ? (FwdBck ? (Fwd) : (Bck)) : (MP));
+		Bck <= ~reset ? (-stp) : (Trvl ? (FwdBck ? (MP) : (Bck - stp) ) : (Bck));
+		
 		if(encCount == Fwd[N - 1 : precBits]) begin
-			MvFwd <= 1'b1;
-			MvBck <= 1'b0;
+			inches <= inches + 1'b1;
 		end
 		else if(encCount == Bck[N - 1 : precBits]) begin
-			MvBck <= 1'b1;
-			MvFwd <= 1'b0;
-		end
-		else begin
-			MvFwd <= 1'b0;
-			MvBck <= 1'b0;
+			inches <= inches - 1'b1;
 		end
 		
 	end

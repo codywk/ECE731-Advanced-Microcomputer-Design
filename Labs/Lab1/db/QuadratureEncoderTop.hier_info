@@ -4,7 +4,7 @@ reset => reset.IN1
 A => A.IN1
 B => B.IN1
 Trvl <= Trvl.DB_MAX_OUTPUT_PORT_TYPE
-FwdBck <= MvFwd.DB_MAX_OUTPUT_PORT_TYPE
+FwdBck <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 encCount[0] <= UpDownCounter:QuadPulseCounter.count
 encCount[1] <= UpDownCounter:QuadPulseCounter.count
 encCount[2] <= UpDownCounter:QuadPulseCounter.count
@@ -145,6 +145,26 @@ mid[34] <= MP[34].DB_MAX_OUTPUT_PORT_TYPE
 mid[35] <= MP[35].DB_MAX_OUTPUT_PORT_TYPE
 mid[36] <= MP[36].DB_MAX_OUTPUT_PORT_TYPE
 mid[37] <= MP[37].DB_MAX_OUTPUT_PORT_TYPE
+inches[0] <= inches[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[1] <= inches[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[2] <= inches[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[3] <= inches[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[4] <= inches[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[5] <= inches[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[6] <= inches[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[7] <= inches[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[8] <= inches[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[9] <= inches[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[10] <= inches[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[11] <= inches[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[12] <= inches[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[13] <= inches[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[14] <= inches[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[15] <= inches[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[16] <= inches[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[17] <= inches[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[18] <= inches[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[19] <= inches[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |QuadratureEncoderTop|EncoderDigitalFilter:InputAFilter
