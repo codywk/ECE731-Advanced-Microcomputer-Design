@@ -7,7 +7,7 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	output FwdBck, // forward or backwards motion	
 	output[encCountBits - 1 : 0] encCount,
 	output[N - 1 : 0] forward, back, mid,
-	output reg[19:0] inches
+	output reg[19 : 0] inches
 	);
 		
 	reg[N - 1 : 0] Fwd, MP, Bck; // these signals will save the values for specific points to keep track of total

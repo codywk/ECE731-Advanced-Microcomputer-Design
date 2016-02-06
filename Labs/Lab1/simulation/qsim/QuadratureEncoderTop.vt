@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "02/05/2016 11:10:36"
+// Generated on "02/05/2016 20:25:51"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    QuadratureEncoderTop
 // 
@@ -160,6 +160,8 @@ initial
 begin
 	FwdBck_expected = 1'bX;
 	FwdBck_expected = #999000 1'b0;
+	FwdBck_expected = #2461000 1'bX;
+	FwdBck_expected = #30000 1'b0;
 end 
 
 // expected Trvl
@@ -3314,11 +3316,26 @@ begin
 end 
 
 // A
-always
+initial
 begin
+	repeat(17)
+	begin
+		A = 1'b0;
+		A = #100000 1'b1;
+		# 100000;
+	end
 	A = 1'b0;
-	A = #50000 1'b1;
-	#50000;
+	A = #100000 1'b1;
+	A = #45000 1'b0;
+	A = #100000 1'b1;
+	# 100000;
+	repeat(81)
+	begin
+		A = 1'b0;
+		A = #100000 1'b1;
+		# 100000;
+	end
+	A = 1'b0;
 end 
 
 // B
@@ -3326,27 +3343,22 @@ initial
 begin
 	B = 1'b1;
 	# 25000;
-	repeat(56)
+	repeat(17)
 	begin
 		B = 1'b0;
-		B = #50000 1'b1;
-		# 50000;
+		B = #100000 1'b1;
+		# 100000;
 	end
 	B = 1'b0;
-	B = #50000 1'b1;
-	B = #5000 1'b0;
-	B = #20000 1'b1;
-	B = #25000 1'b0;
-	B = #50000 1'b1;
-	# 50000;
-	repeat(141)
+	B = #35000 1'b1;
+	# 60000;
+	repeat(82)
 	begin
 		B = 1'b0;
-		B = #50000 1'b1;
-		# 50000;
+		B = #100000 1'b1;
+		# 100000;
 	end
 	B = 1'b0;
-	B = #50000 1'b1;
 end 
 
 QuadratureEncoderTop_vlg_sample_tst tb_sample (

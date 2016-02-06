@@ -1,5 +1,5 @@
 Fitter report for QuadratureEncoderTop
-Fri Feb 05 11:03:43 2016
+Fri Feb 05 15:47:34 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -66,7 +66,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Feb 05 11:03:43 2016           ;
+; Fitter Status                      ; Successful - Fri Feb 05 15:47:34 2016           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; QuadratureEncoderTop                            ;
 ; Top-level Entity Name              ; QuadratureEncoderTop                            ;
@@ -368,7 +368,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.pin.
+The pin-out file can be found in C:/Users/codyw/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.pin.
 
 
 +----------------------------------------------------------------------+
@@ -2648,23 +2648,23 @@ Info (170195): Router estimated average interconnect usage is 1% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:02
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.39 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.42 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
-Info (144001): Generated suppressed messages file C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.fit.smsg
+Info (144001): Generated suppressed messages file C:/Users/codyw/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 788 megabytes
-    Info: Processing ended: Fri Feb 05 11:03:45 2016
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:14
+    Info: Peak virtual memory: 795 megabytes
+    Info: Processing ended: Fri Feb 05 15:47:34 2016
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:12
 
 
 +----------------------------+
 ; Fitter Suppressed Messages ;
 +----------------------------+
-The suppressed messages can be found in C:/Users/Cody/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.fit.smsg.
+The suppressed messages can be found in C:/Users/codyw/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.fit.smsg.
 
 
