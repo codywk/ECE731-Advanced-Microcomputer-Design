@@ -6,7 +6,6 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	output Trvl,
 	output FwdBck, // forward or backwards motion	
 	output[encCountBits - 1 : 0] encCount,
-	output[N - 1 : 0] forward, back, mid,
 	output reg[19 : 0] inches
 	);
 		
@@ -28,11 +27,6 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	assign MvBck = (encCount == Bck[N - 1 : precBits]);
 	assign Trvl = MvFwd | MvBck;
 	assign FwdBck = MvFwd;
-	
-	//variables for debugging
-	assign forward = Fwd;
-	assign back = Bck;
-	assign mid = MP;
 	
 	always @(posedge clk) begin
 	

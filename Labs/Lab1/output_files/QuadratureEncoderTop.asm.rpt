@@ -1,5 +1,5 @@
 Assembler report for QuadratureEncoderTop
-Fri Feb 05 15:47:37 2016
+Tue Feb 09 14:01:27 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/codyw/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.sof
+  5. Assembler Device Options: H:/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.sof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Feb 05 15:47:37 2016 ;
+; Assembler Status      ; Successful - Tue Feb 09 14:01:27 2016 ;
 ; Revision Name         ; QuadratureEncoderTop                  ;
 ; Top-level Entity Name ; QuadratureEncoderTop                  ;
 ; Family                ; Cyclone III                           ;
@@ -77,24 +77,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Generated Files                                                                                                          ;
-+------------------------------------------------------------------------------------------------------------------------------------+
-; File Name                                                                                                                          ;
-+------------------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/codyw/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.sof ;
-+------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                               ;
++-----------------------------------------------------------------------------------------+
+; File Name                                                                               ;
++-----------------------------------------------------------------------------------------+
+; H:/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.sof ;
++-----------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/codyw/Documents/Kansas State Classes/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.sof ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                                                                     ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Device         ; EP3C16F484C6                                                                                                                                ;
-; JTAG usercode  ; 0x001014ED                                                                                                                                  ;
-; Checksum       ; 0x001014ED                                                                                                                                  ;
-+----------------+---------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: H:/ECE731-Advanced-Microcomputer-Design/Labs/Lab1/output_files/QuadratureEncoderTop.sof ;
++----------------+--------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                          ;
++----------------+--------------------------------------------------------------------------------------------------+
+; Device         ; EP3C16F484C6                                                                                     ;
+; JTAG usercode  ; 0x000F493C                                                                                       ;
+; Checksum       ; 0x000F493C                                                                                       ;
++----------------+--------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -103,14 +103,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Feb 05 15:47:35 2016
+    Info: Processing started: Tue Feb 09 14:01:26 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off QuadratureEncoderTop -c QuadratureEncoderTop
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 433 megabytes
-    Info: Processing ended: Fri Feb 05 15:47:37 2016
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 412 megabytes
+    Info: Processing ended: Tue Feb 09 14:01:27 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
