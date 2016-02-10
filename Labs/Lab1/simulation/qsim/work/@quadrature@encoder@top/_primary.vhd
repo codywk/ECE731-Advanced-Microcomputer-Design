@@ -9,9 +9,7 @@ entity QuadratureEncoderTop is
         Trvl            : out    vl_logic;
         FwdBck          : out    vl_logic;
         encCount        : out    vl_logic_vector(25 downto 0);
-        forward         : out    vl_logic_vector(37 downto 0);
-        back            : out    vl_logic_vector(37 downto 0);
-        mid             : out    vl_logic_vector(37 downto 0);
-        inches          : out    vl_logic_vector(19 downto 0)
+        inches          : out    vl_logic_vector(11 downto 0);
+        display         : out    vl_logic_vector(20 downto 0)
     );
 end QuadratureEncoderTop;

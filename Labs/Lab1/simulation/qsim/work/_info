@@ -4,82 +4,82 @@ K3
 cModel Technology
 Z0 dC:\Users\Cody\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
 vQuadratureEncoderTop
-Z1 !s100 ^H]cne9>1zR_fSUT;4HG`0
-Z2 Im@RzXdmn<FDo9]_cfklmS3
-Z3 VKanf<Am:CSSX?OM]@6=G[1
-Z4 dC:\Users\codyw\Documents\Kansas State Classes\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
-Z5 w1454725552
-Z6 8QuadratureEncoderTop.vo
-Z7 FQuadratureEncoderTop.vo
+Z1 I^Qa5>4RcOJKn:LkOQI8?P0
+Z2 V5OKCVVD:6_EFj`kn>o`MT2
+Z3 dH:\ECE731-Advanced-Microcomputer-Design\Labs\Lab1\simulation\qsim
+Z4 w1455123304
+Z5 8QuadratureEncoderTop.vo
+Z6 FQuadratureEncoderTop.vo
 L0 31
-Z8 OV;L;10.1d;51
+Z7 OV;L;10.1d;51
 r1
 31
-Z9 !s90 -work|work|QuadratureEncoderTop.vo|
-Z10 o-work work -O0
-Z11 n@quadrature@encoder@top
+Z8 !s90 -work|work|QuadratureEncoderTop.vo|
+Z9 o-work work -O0
+Z10 n@quadrature@encoder@top
 !i10b 1
+Z11 !s100 eKNX`I>kRUbYiMH[bN3nb3
 !s85 0
-Z12 !s108 1454725553.735000
+Z12 !s108 1455123306.394000
 Z13 !s107 QuadratureEncoderTop.vo|
 !s101 -O0
 vQuadratureEncoderTop_vlg_check_tst
 !i10b 1
-Z14 !s100 3c@Llh1ndcB=4m=H2<`_n1
-Z15 IbFifN41l:eo9m:j`eT85Q3
-Z16 Vc_i1U9;Fo^Ka@Xn<i<dM23
-R4
-Z17 w1454725551
-Z18 8QuadratureEncoderTop.vt
-Z19 FQuadratureEncoderTop.vt
+!s100 ^:3hHD<WQWWA:ToAFii9J1
+IZ[7:eU4G_Dgj14HiZWfM43
+V7;W698JXmEcN5IR7Bl?Bo2
+R3
+Z14 w1455123303
+Z15 8QuadratureEncoderTop.vt
+Z16 FQuadratureEncoderTop.vt
 L0 63
-R8
+R7
 r1
 !s85 0
 31
-Z20 !s108 1454725554.411000
-Z21 !s107 QuadratureEncoderTop.vt|
-Z22 !s90 -work|work|QuadratureEncoderTop.vt|
+Z17 !s108 1455123306.751000
+Z18 !s107 QuadratureEncoderTop.vt|
+Z19 !s90 -work|work|QuadratureEncoderTop.vt|
 !s101 -O0
-R10
-Z23 n@quadrature@encoder@top_vlg_check_tst
+R9
+Z20 n@quadrature@encoder@top_vlg_check_tst
 vQuadratureEncoderTop_vlg_sample_tst
 !i10b 1
-Z24 !s100 k?zR6FXMDR6dToETSDe8@3
-Z25 I5Zan@?=o]0EBQL8SKU^la2
-Z26 VYPKWJ[VM1CS=hl5S<eHU@2
-R4
-R17
-R18
-R19
+Z21 !s100 k?zR6FXMDR6dToETSDe8@3
+Z22 I5Zan@?=o]0EBQL8SKU^la2
+Z23 VYPKWJ[VM1CS=hl5S<eHU@2
+R3
+R14
+R15
+R16
 L0 29
-R8
+R7
 r1
 !s85 0
 31
-R20
-R21
-R22
+R17
+R18
+R19
 !s101 -O0
-R10
-Z27 n@quadrature@encoder@top_vlg_sample_tst
+R9
+Z24 n@quadrature@encoder@top_vlg_sample_tst
 vQuadratureEncoderTop_vlg_vec_tst
 !i10b 1
-!s100 d7PV73a=87RX;^@[c]oQS2
-I4ELQz^D6cZFikR?h?Y7NN2
-Z28 V11PYGePWBOWU?KUnW8B0H3
-R4
-R17
-R18
-R19
-Z29 L0 3269
-R8
+!s100 j2nRTeJ<nLGoI6XWD4Gkh0
+IP]WQZGiFecjc30MOJ01gU1
+Z25 V11PYGePWBOWU?KUnW8B0H3
+R3
+R14
+R15
+R16
+L0 816
+R7
 r1
 !s85 0
 31
-R20
-R21
-R22
+R17
+R18
+R19
 !s101 -O0
-R10
-Z30 n@quadrature@encoder@top_vlg_vec_tst
+R9
+Z26 n@quadrature@encoder@top_vlg_vec_tst

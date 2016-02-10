@@ -19,7 +19,7 @@ module EncoderDigitalFilter(
 		H1 <= H0;
 		H2 <= H1;
 		
-		if((H0 & H1) || (H1 & H2)) begin
+		if((H0 & H1) || (H1 & H2) || (H2 & H0)) begin
 			filteredSig <= 1'b1;	
 		end
 		else begin

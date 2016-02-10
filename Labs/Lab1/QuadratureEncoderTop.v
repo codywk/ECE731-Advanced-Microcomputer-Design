@@ -1,4 +1,4 @@
-module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21516)(
+module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 120218)(
 	input clk,
 	input reset,
 	input A,
@@ -6,7 +6,8 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	output Trvl,
 	output FwdBck, // forward or backwards motion	
 	output[encCountBits - 1 : 0] encCount,
-	output reg[19 : 0] inches
+	output reg[11 : 0] inches,
+	output[20 : 0] display
 	);
 		
 	reg[N - 1 : 0] Fwd, MP, Bck; // these signals will save the values for specific points to keep track of total
@@ -21,6 +22,9 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	EncoderDigitalFilter 			InputBFilter(.clk(clk), .sig(B), .filteredSig(_B));
 	EncoderDecoder 					QuadratureEncoder(.clk(clk), .A(_A), .B(_B), .change(change), .direction(dir));
 	UpDownCounter #(encCountBits) QuadPulseCounter(.clk(clk), .reset(reset), .enable(change), .dir(dir), .count(encCount));
+	seven_seg							DigitZero( .digit(inches[3:0]), .seg_out(display[6:0]));
+	seven_seg							DigitOne( .digit(inches[7:4]), .seg_out(display[13:7]));
+	seven_seg							DigitTwo( .digit(inches[11:8]), .seg_out(display[20:14]));
 	
 	//assign internal signals
 	assign MvFwd = (encCount == Fwd[N - 1 : precBits]);
@@ -30,15 +34,21 @@ module QuadratureEncoderTop #(N = 38, encCountBits = 26, precBits = 12, stp = 21
 	
 	always @(posedge clk) begin
 	
-		Fwd <= ~reset ? (stp) :(Trvl ? (FwdBck ? (Fwd + stp) : (MP) ) : (Fwd));
+		Fwd <= ~reset ? (stp) : (Trvl ? (FwdBck ? (Fwd + stp) : (MP) ) : (Fwd));
 		MP  <= ~reset ? (0) : (Trvl ? (FwdBck ? (Fwd) : (Bck)) : (MP));
 		Bck <= ~reset ? (-stp) : (Trvl ? (FwdBck ? (MP) : (Bck - stp) ) : (Bck));
 		
-		if(encCount == Fwd[N - 1 : precBits]) begin
-			inches <= inches + 1'b1;
+		if(~reset) begin
+			inches = 0;
 		end
-		else if(encCount == Bck[N - 1 : precBits]) begin
-			inches <= inches - 1'b1;
+		
+		else begin
+			if(encCount == Fwd[N - 1 : precBits]) begin
+				inches <= inches + 1'b1;
+			end
+			else if(encCount == Bck[N - 1 : precBits]) begin
+				inches <= inches - 1'b1;
+			end
 		end
 		
 	end

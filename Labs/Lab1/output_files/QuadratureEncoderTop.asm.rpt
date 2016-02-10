@@ -1,5 +1,5 @@
 Assembler report for QuadratureEncoderTop
-Tue Feb 09 14:01:27 2016
+Wed Feb 10 12:17:54 2016
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Feb 09 14:01:27 2016 ;
+; Assembler Status      ; Successful - Wed Feb 10 12:17:54 2016 ;
 ; Revision Name         ; QuadratureEncoderTop                  ;
 ; Top-level Entity Name ; QuadratureEncoderTop                  ;
 ; Family                ; Cyclone III                           ;
@@ -92,8 +92,8 @@ applicable agreement for further details.
 ; Option         ; Setting                                                                                          ;
 +----------------+--------------------------------------------------------------------------------------------------+
 ; Device         ; EP3C16F484C6                                                                                     ;
-; JTAG usercode  ; 0x000F493C                                                                                       ;
-; Checksum       ; 0x000F493C                                                                                       ;
+; JTAG usercode  ; 0x000FA515                                                                                       ;
+; Checksum       ; 0x000FA515                                                                                       ;
 +----------------+--------------------------------------------------------------------------------------------------+
 
 
@@ -103,13 +103,13 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Feb 09 14:01:26 2016
+    Info: Processing started: Wed Feb 10 12:17:53 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off QuadratureEncoderTop -c QuadratureEncoderTop
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 412 megabytes
-    Info: Processing ended: Tue Feb 09 14:01:27 2016
+    Info: Processing ended: Wed Feb 10 12:17:54 2016
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

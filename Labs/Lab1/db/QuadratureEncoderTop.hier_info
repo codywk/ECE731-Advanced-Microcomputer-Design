@@ -31,26 +31,39 @@ encCount[22] <= UpDownCounter:QuadPulseCounter.count
 encCount[23] <= UpDownCounter:QuadPulseCounter.count
 encCount[24] <= UpDownCounter:QuadPulseCounter.count
 encCount[25] <= UpDownCounter:QuadPulseCounter.count
-inches[0] <= inches[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[1] <= inches[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[2] <= inches[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[3] <= inches[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[4] <= inches[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[5] <= inches[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[6] <= inches[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[7] <= inches[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[8] <= inches[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[9] <= inches[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[10] <= inches[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[11] <= inches[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[12] <= inches[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[13] <= inches[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[14] <= inches[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[15] <= inches[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[16] <= inches[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[17] <= inches[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[18] <= inches[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-inches[19] <= inches[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+inches[0] <= inches[0].DB_MAX_OUTPUT_PORT_TYPE
+inches[1] <= inches[1].DB_MAX_OUTPUT_PORT_TYPE
+inches[2] <= inches[2].DB_MAX_OUTPUT_PORT_TYPE
+inches[3] <= inches[3].DB_MAX_OUTPUT_PORT_TYPE
+inches[4] <= inches[4].DB_MAX_OUTPUT_PORT_TYPE
+inches[5] <= inches[5].DB_MAX_OUTPUT_PORT_TYPE
+inches[6] <= inches[6].DB_MAX_OUTPUT_PORT_TYPE
+inches[7] <= inches[7].DB_MAX_OUTPUT_PORT_TYPE
+inches[8] <= inches[8].DB_MAX_OUTPUT_PORT_TYPE
+inches[9] <= inches[9].DB_MAX_OUTPUT_PORT_TYPE
+inches[10] <= inches[10].DB_MAX_OUTPUT_PORT_TYPE
+inches[11] <= inches[11].DB_MAX_OUTPUT_PORT_TYPE
+display[0] <= seven_seg:DigitZero.seg_out
+display[1] <= seven_seg:DigitZero.seg_out
+display[2] <= seven_seg:DigitZero.seg_out
+display[3] <= seven_seg:DigitZero.seg_out
+display[4] <= seven_seg:DigitZero.seg_out
+display[5] <= seven_seg:DigitZero.seg_out
+display[6] <= seven_seg:DigitZero.seg_out
+display[7] <= seven_seg:DigitOne.seg_out
+display[8] <= seven_seg:DigitOne.seg_out
+display[9] <= seven_seg:DigitOne.seg_out
+display[10] <= seven_seg:DigitOne.seg_out
+display[11] <= seven_seg:DigitOne.seg_out
+display[12] <= seven_seg:DigitOne.seg_out
+display[13] <= seven_seg:DigitOne.seg_out
+display[14] <= seven_seg:DigitTwo.seg_out
+display[15] <= seven_seg:DigitTwo.seg_out
+display[16] <= seven_seg:DigitTwo.seg_out
+display[17] <= seven_seg:DigitTwo.seg_out
+display[18] <= seven_seg:DigitTwo.seg_out
+display[19] <= seven_seg:DigitTwo.seg_out
+display[20] <= seven_seg:DigitTwo.seg_out
 
 
 |QuadratureEncoderTop|EncoderDigitalFilter:InputAFilter
@@ -214,5 +227,47 @@ count[22] <= count[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[23] <= count[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[24] <= count[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 count[25] <= count[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|QuadratureEncoderTop|seven_seg:DigitZero
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+seg_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|QuadratureEncoderTop|seven_seg:DigitOne
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+seg_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|QuadratureEncoderTop|seven_seg:DigitTwo
+digit[0] => Decoder0.IN3
+digit[1] => Decoder0.IN2
+digit[2] => Decoder0.IN1
+digit[3] => Decoder0.IN0
+seg_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
 
 
